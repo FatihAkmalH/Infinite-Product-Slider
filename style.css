@@ -1,0 +1,138 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+.box {
+    width: 350px;
+    height: 400px;
+    box-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.img-slide {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.img-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.detail-box {
+    position: relative;
+    bottom: 67px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 0 0 5px 5px;
+    background-color: #fff;
+    border-top: 1px solid rgba(17, 17, 17, 0.993);
+}
+
+.product-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-name h3 {
+    margin: 5px 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+.product-name p {
+    color: rgba(0,0,0,0.7);
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.price {
+    color: #161616;
+    letter-spacing: 0;
+    right: 0; 
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.overlay-info {
+    position: absolute;
+    left: 50%;
+    top: 42.6%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 85%; 
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.overlay-info h3 {
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 2px;
+    font: 24px;
+}
+
+.overlay-info .desc {
+    padding: 10px;
+    margin: 10px;
+    text-align: justify;
+    color: rgba(255, 255, 255, 0.781);
+    line-height: 25px;
+    letter-spacing: 1px;
+}
+
+.overlay-info .btn {
+    background: #fff;
+    padding: 10px;
+    border-radius: 50px;
+    cursor: pointer; 
+    border: 1px solid #fff;
+    margin: 5px 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.overlay-info .btn:hover {
+    background: transparent;
+    color: #fff;
+}
+
+.overlay-info {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.img-slide:hover .overlay-info {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+}
